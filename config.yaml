@@ -1,0 +1,7 @@
+servers:
+  - name: PowerDNS Server 1
+    url: http://localhost:8081/api/v1
+    api_key: secret
+  - name: PowerDNS Server 2
+    url: http://localhost:8082/api/v1
+    api_key: secret2
