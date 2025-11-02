@@ -23,19 +23,19 @@ A terminal user interface (TUI) for managing PowerDNS servers and zones, built w
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:FineSam/pdnstui.git
     cd pdnstui
     ```
 
 2.  **Create a virtual environment (recommended):**
     ```bash
-    python3 -m venv .venv
+    venv .venv --python 3.14
     source .venv/bin/activate
     ```
 
 3.  **Install the dependencies:**
     ```bash
-    pip install textual powerdns pyyaml
+    uv pip install requests textual python-powerdns pyyaml
     ```
 
 ## Usage
@@ -50,10 +50,10 @@ Create a `config.yaml` file with your PowerDNS server details. This is the most 
 
 ```yaml
 servers:
-  - name: "Primary DNS"
+  - name: "PowerDNS 1"
     url: "https://pdns.example.com:8081"
     api_key: "your_primary_api_key"
-  - name: "Secondary DNS"
+  - name: "PowerDNS 2"
     url: "https://pdns-secondary.example.com:8081"
     api_key: "your_secondary_api_key"
 ```
